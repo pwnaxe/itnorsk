@@ -2,7 +2,7 @@
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
-      <Title>Short</Title>
+      <Title>LETS IT IT NORSK</Title>
     </Section>
   </Row>
 </TopAppBar>

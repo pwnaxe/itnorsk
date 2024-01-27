@@ -36,6 +36,10 @@
         // ... reset other properties
     }
   }
+
+  import { mdiFormatColorFill, mdiWrench, mdiCurrencyUsd } from '@mdi/js';
+  import IconButton, { Icon } from '@smui/icon-button';
+
 </script>
 
 <svelte:head>
@@ -59,7 +63,9 @@
 
 <div class="app">
 	<div class="corner">
-		<button on:click={() => applyTheme('default')}>Domyślny</button>
+		<IconButton class="material-icons" on:click={() => applyTheme('default')}><Icon tag="svg" viewBox="0 0 24 24">
+      <path fill="currentColor" d={mdiFormatColorFill} />
+    </Icon></IconButton>
 		<a href="https://github.com/pwnaxe">
 			<img src={github} alt="GitHub" />
 		</a>
@@ -87,12 +93,24 @@
 
 	.corner {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		flex-direction: row;
-		align-items: end;
+		align-items: center;
 		z-index: 10;
 		width: 3em;
 		height: 3em;
+		position: absolute;
+		top: 3px;
+		right: 2%;
+	}
+
+	.themebutton {
+		display: block;
+
+	}
+
+	.corner a {
+		display: block;
 	}
 
 	.corner img {
