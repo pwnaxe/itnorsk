@@ -1,88 +1,42 @@
-:root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
-	--color-text: rgba(0, 0, 0, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
-}
-
-[data-theme='dark'] {
-	--primary-color: #555;
-	--secondary-color: #777;
-	--text-color: #ddd;
-	--background-color: #222;
-	--link-color: #5588ee;
-	/* ... więcej zmiennych ... */
-}
-
-[data-theme='green'] {
-	--primary-color: #2e7d32;
-	--secondary-color: #a5d6a7;
-	--text-color: #333;
-	--background-color: #e8f5e9;
-	--link-color: #81c784;
-	/* ... więcej zmiennych ... */
-}
-
-[data-theme='blue'] {
-	--color-background: #0f0f3f;
-	--color-text: #e0e0f8;
-	/* ... */
-}
-
 body {
-	font-family: var(--font-body);
-	color: var(--color-text);
+	font-family: 'Roboto', sans-serif;
 	min-height: 100vh;
 	margin: 0;
 	background-attachment: fixed;
 	background-size: 100vw;
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
+:root {
+	--menu-bg-color-default: #ffffff; /* Domyślny kolor tła menu */
+	--menu-text-color-default: #000000; /* Domyślny kolor tekstu menu */
 }
 
-p {
-	line-height: 1.5;
+.top-app-bar {
+	background-color: var(--menu-bg-color, --menu-bg-color-default);
+	color: var(--menu-text-color, --menu-text-color-default);
+	/* inne style menu */
 }
 
-a {
-	color: var(--color-theme-1);
-	text-decoration: none;
+.menu {
+	background-color: var(--menu-bg-color);
+	color: var(--menu-text-color);
+	/* inne style menu */
 }
 
-a:hover {
-	text-decoration: underline;
+[data-theme='default'] {
+	background-color: #ffffff;
 }
 
-h1 {
-	font-size: 2rem;
-	text-align: center;
+[data-theme='dark'] {
+	background-color: #222222;
+	--menu-bg-color: #333;
+	--menu-text-color: #fff;
 }
 
-h2 {
-	font-size: 1rem;
+[data-theme='green'] {
+	background-color: #a9f1af;
 }
 
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
-
-#smui-app,
-body,
-html {
-	display: block;
-	height: auto;
-	width: auto;
-	position: static;
+[data-theme='blue'] {
+	background-color: #7bbceb;
 }
