@@ -4,6 +4,11 @@
   import { onMount } from 'svelte';
 	import { mdiFormatColorFill } from '@mdi/js';
   import IconButton, { Icon } from '@smui/icon-button';
+	import { init, addMessages, locale } from 'svelte-i18n';
+	import Top from './components/top.svelte'
+	import Contact from './components/contact.svelte'
+	import Tech from './components/tech.svelte'
+	import Price from './components/price.svelte'
 
   let theme;
   const themes = ['default', 'dark', 'green', 'blue'];
@@ -26,6 +31,16 @@
     root.setAttribute('data-theme', theme);
   }
 
+
+init({
+	fallbackLocale: 'en',
+	initialLocale: 'en',
+});
+
+function changeLocale(lang) {
+	locale.set(lang);
+	localStorage.setItem('locale', lang);
+}
 </script>
 
 <svelte:head>
@@ -48,6 +63,7 @@
 
 <div class="app">
 	<div class="corner">
+		<button on:click={() => changeLocale()}></button>
 		<IconButton class="material-icons" on:click={changeTheme}>
 			<Icon tag="svg" viewBox="0 0 24 24">
 				<path fill="currentColor" d={mdiFormatColorFill} />
@@ -58,7 +74,10 @@
 		</a>
 	</div>
 	<main>
-		<slot />
+		<Top />
+		<Tech />
+		<Price />
+		<Contact />
 	</main>
 </div>
 

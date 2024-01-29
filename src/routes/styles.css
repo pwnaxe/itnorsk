@@ -6,37 +6,46 @@ body {
 	background-size: 100vw;
 }
 
-:root {
-	--menu-bg-color-default: #ffffff; /* Domyślny kolor tła menu */
-	--menu-text-color-default: #000000; /* Domyślny kolor tekstu menu */
-}
-
-.top-app-bar {
-	background-color: var(--menu-bg-color, --menu-bg-color-default);
-	color: var(--menu-text-color, --menu-text-color-default);
-	/* inne style menu */
-}
-
-.menu {
-	background-color: var(--menu-bg-color);
-	color: var(--menu-text-color);
-	/* inne style menu */
-}
-
 [data-theme='default'] {
 	background-color: #ffffff;
+	.navmenu {
+		background-color: rgb(41, 83, 175);
+	}
 }
 
 [data-theme='dark'] {
 	background-color: #222222;
-	--menu-bg-color: #333;
-	--menu-text-color: #fff;
+	.navmenu {
+		background-color: rgb(88, 88, 88);
+	}
 }
 
 [data-theme='green'] {
 	background-color: #a9f1af;
+	.navmenu {
+		background-color: rgb(33, 88, 28);
+	}
 }
 
 [data-theme='blue'] {
 	background-color: #7bbceb;
+	.navmenu {
+		background-color: rgb(41, 83, 175);
+	}
+}
+
+.top {
+	height: 100vh;
+}
+
+.tech {
+	height: 100vh;
+}
+
+.price {
+	height: 100vh;
+}
+
+.contact {
+	height: 20vh;
 }

@@ -10,7 +10,7 @@
   let topAppBar: TopAppBar;
 </script>
 
-<TopAppBar bind:this={topAppBar} variant="short">
+<TopAppBar class=navmenu bind:this={topAppBar} variant="short">
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
@@ -19,12 +19,10 @@
   </Row>
 </TopAppBar>
 <AutoAdjust {topAppBar}>
+  <div class="top"></div>
+  <div class="tech"></div>
+  <div class="price"></div>
+  <div class="contact"></div>
 </AutoAdjust>
 
-<style>
-  .topAppBar {
-    background-color: #ffffff; /* Zmień #yourColor na wybrany kolor */
-  }
 
-  .mdc-top-app-bar .mdc-top-app-bar__row {}
-</style>
