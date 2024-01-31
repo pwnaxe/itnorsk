@@ -33,19 +33,3 @@ body {
 		background-color: rgb(41, 83, 175);
 	}
 }
-
-.top {
-	height: 100vh;
-}
-
-.tech {
-	height: 100vh;
-}
-
-.price {
-	height: 100vh;
-}
-
-.contact {
-	height: 20vh;
-}

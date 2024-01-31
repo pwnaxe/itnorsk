@@ -5,12 +5,24 @@
     Title,
     AutoAdjust,
   } from '@smui/top-app-bar';
+  import { writable } from 'svelte/store';
   import IconButton from '@smui/icon-button';
+  import Top from './components/top.svelte'
+	import Contact from './components/contact.svelte'
+	import Tech from './components/tech.svelte'
+	import Price from './components/price.svelte'
 
   let topAppBar: TopAppBar;
+  const isDropdownOpen = writable(false);
+  function toggleDropdown() {
+    isDropdownOpen.update(o => !o);
+  }
+  function closeDropdown() {
+    isDropdownOpen.set(false);
+  }
 </script>
 
-<TopAppBar class=navmenu bind:this={topAppBar} variant="short">
+<TopAppBar class="navmenu" bind:this={topAppBar} variant="short">
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
@@ -19,10 +31,10 @@
   </Row>
 </TopAppBar>
 <AutoAdjust {topAppBar}>
-  <div class="top"></div>
-  <div class="tech"></div>
-  <div class="price"></div>
-  <div class="contact"></div>
+  <Top />
+  <Tech />
+  <Price />
+  <Contact />
 </AutoAdjust>
 
 

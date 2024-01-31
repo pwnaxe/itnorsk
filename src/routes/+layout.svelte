@@ -5,10 +5,7 @@
 	import { mdiFormatColorFill } from '@mdi/js';
   import IconButton, { Icon } from '@smui/icon-button';
 	import { init, addMessages, locale } from 'svelte-i18n';
-	import Top from './components/top.svelte'
-	import Contact from './components/contact.svelte'
-	import Tech from './components/tech.svelte'
-	import Price from './components/price.svelte'
+	
 
   let theme;
   const themes = ['default', 'dark', 'green', 'blue'];
@@ -74,10 +71,7 @@ function changeLocale(lang) {
 		</a>
 	</div>
 	<main>
-		<Top />
-		<Tech />
-		<Price />
-		<Contact />
+		<slot />
 	</main>
 </div>
 
