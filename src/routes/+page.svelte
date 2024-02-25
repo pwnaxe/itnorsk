@@ -11,6 +11,7 @@
 	import Contact from './components/contact.svelte'
 	import Tech from './components/tech.svelte'
 	import Price from './components/price.svelte'
+  import Paypal from './components/paypal.svelte'
 
   let topAppBar: TopAppBar;
   const isDropdownOpen = writable(false);
@@ -32,9 +33,10 @@
 </TopAppBar>
 <AutoAdjust {topAppBar}>
   <Top />
-  <Tech />
+  <Paypal />
+  <!-- <Tech />
   <Price />
-  <Contact />
+  <Contact /> -->
 </AutoAdjust>
 
 

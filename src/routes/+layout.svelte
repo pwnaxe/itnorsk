@@ -1,10 +1,18 @@
 <script lang="ts">
+	import { writable } from 'svelte/store';
 	import './styles.css';
 	import github from '$lib/images/github.svg';
   import { onMount } from 'svelte';
 	import { mdiFormatColorFill } from '@mdi/js';
   import IconButton, { Icon } from '@smui/icon-button';
 	import { init, addMessages, locale } from 'svelte-i18n';
+	import PaymentPopup from './components/paypal.svelte';
+
+  let isPaymentPopupOpen = writable(false);
+
+  function openPaymentPopup() {
+    isPaymentPopupOpen.set(true);
+  }
 	
 
   let theme;
@@ -73,6 +81,11 @@ function changeLocale(lang) {
 	<main>
 		<slot />
 	</main>
+	<div>
+		<button on:click={openPaymentPopup}>Otwórz płatność</button>
+<PaymentPopup {isOpen}={isPaymentPopupOpen} 
+on:close={() => isPaymentPopupOpen = false} />
+	</div>
 </div>
 
 <style>
