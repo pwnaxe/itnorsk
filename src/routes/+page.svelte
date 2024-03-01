@@ -11,7 +11,6 @@
 	import Contact from './components/contact.svelte'
 	import Tech from './components/tech.svelte'
 	import Price from './components/price.svelte'
-  import Paypal from './components/paypal.svelte'
 
   let topAppBar: TopAppBar;
   const isDropdownOpen = writable(false);
@@ -27,16 +26,15 @@
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
-      <Title>LETS IT IT NORSK</Title>
+      <Title>Modern Solutions for Your Business with IT NORSK</Title>
     </Section>
   </Row>
 </TopAppBar>
 <AutoAdjust {topAppBar}>
   <Top />
-  <Paypal />
-  <!-- <Tech />
+  <Tech />
   <Price />
-  <Contact /> -->
+  <Contact />
 </AutoAdjust>
 
 

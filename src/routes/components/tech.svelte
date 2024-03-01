@@ -1,5 +1,6 @@
 <script>
   import UnleashYourIT from '$lib/images/UnleashYourIT.mp4';
+  import TechDrawer from './TechDrawer.svelte';
 </script>
 
 <div class="tech">
@@ -13,6 +14,10 @@
     <h1>Welcome to Our Landing Page</h1>
     <p>Here is some description text for your product or service.</p>
   </div>
+  <TechDrawer/>
+  <TechDrawer/>
+  <TechDrawer/>
+  <TechDrawer/>
 </div>
 
 <style>

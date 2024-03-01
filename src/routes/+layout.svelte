@@ -6,7 +6,6 @@
 	import { mdiFormatColorFill } from '@mdi/js';
   import IconButton, { Icon } from '@smui/icon-button';
 	import { init, addMessages, locale } from 'svelte-i18n';
-	import PaymentPopup from './components/paypal.svelte';
 
   let isPaymentPopupOpen = writable(false);
 
@@ -81,11 +80,6 @@ function changeLocale(lang) {
 	<main>
 		<slot />
 	</main>
-	<div>
-		<button on:click={openPaymentPopup}>Otwórz płatność</button>
-<PaymentPopup {isOpen}={isPaymentPopupOpen} 
-on:close={() => isPaymentPopupOpen = false} />
-	</div>
 </div>
 
 <style>
@@ -98,7 +92,6 @@ on:close={() => isPaymentPopupOpen = false} />
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;

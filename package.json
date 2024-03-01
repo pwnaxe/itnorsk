@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@smui/card": "^7.0.0-beta.16",
 		"@smui/common": "^7.0.0-beta.16",
 		"@smui/icon-button": "^7.0.0-beta.16",
 		"@smui/top-app-bar": "^7.0.0-beta.16",
