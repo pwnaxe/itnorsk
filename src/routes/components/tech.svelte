@@ -4,39 +4,37 @@
 </script>
 
 <div class="tech">
-  <div class="UnleashYourIT-video">
-    <video src="{UnleashYourIT}" controls>
-      <track src="./vidtxt.vtt" kind="captions" srclang="en" label="English" default />
-      Your browser does not support the video tag.
-    </video>
+  <div class="drawer-container">
+    <TechDrawer class="left"/>
+    <TechDrawer class="left"/>
+    <TechDrawer class="right"/>
+    <TechDrawer class="right"/>
   </div>
-  <div class="video-text">
-    <h1>Welcome to Our Landing Page</h1>
-    <p>Here is some description text for your product or service.</p>
-  </div>
-  <TechDrawer/>
-  <TechDrawer/>
-  <TechDrawer/>
-  <TechDrawer/>
 </div>
 
 <style>
   .tech {
-    display: flex;
-    flex-direction: column;
+    display: block;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     text-align: center;
     height: 100vh;
     background-color: #f5f5f5;
   }
 
-  .UnleashYourIT-video video {
-    max-width: 100%;
-    height: auto;
+  .drawer-container {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 20px;
   }
 
-  .video-text {
-    margin-top: 20px;
+  .left {
+    justify-self: end;
+  }
+
+  .right {
+    justify-self: start;
   }
 </style>
