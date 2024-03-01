@@ -13,12 +13,10 @@
       <div class="content">
         {#if expanded}
           <div class="details">
-            <!-- Treść rozwinięta -->
             Szczegółowe informacje na temat technologii...
           </div>
         {:else}
           <div class="summary">
-            <!-- Treść zwinięta -->
             Nazwa technologii
           </div>
         {/if}
