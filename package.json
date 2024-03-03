@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@smui/button": "^7.0.0-beta.16",
 		"@smui/card": "^7.0.0-beta.16",
 		"@smui/common": "^7.0.0-beta.16",
 		"@smui/icon-button": "^7.0.0-beta.16",
@@ -37,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@mdi/js": "^7.4.47",
-		"svelte-i18n": "^4.0.0"
+		"svelte-i18n": "^4.0.0",
+		"swiper": "^11.0.7"
 	}
 }

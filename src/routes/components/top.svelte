@@ -1,34 +1,58 @@
-<script>
-  import itpres from '$lib/images/itpres.webp';
-</script>
+<style>
+  .norskit-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    height: 100vh;
+    background: linear-gradient(-45deg, #295270, #295270, #524175, #524175);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
 
-<div class="landing">
-  <div class="norskit-image">
-    <img src='{itpres}' alt="NorskIT" />
-  </div>
-  <div class="norskit-text">
-    <h1>Welcome to Our Landing Page</h1>
-    <p>Here is some description text for your product or service.</p>
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  .text-container {
+    max-width: 50vw;
+    padding-left: 5vw;
+  }
+  .button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 20px;
+}
+</style>
+
+<div class="norskit-top">
+  <div class="text-container">
+    <h1>Odkryj przyszłość programowania z nami</h1>
+    <p>Z nami programowanie to nie tylko kod, to realizacja wizji nowoczesnej technologii. Dlaczego warto nas wybrać?</p>
+    <ul>
+      <li><strong>Innowacyjne rozwiązania AI:</strong> Stawiamy na sztuczną inteligencję, by dostarczać rozwiązania wyprzedzające czas.</li>
+      <li><strong>Efektywność kosztowa:</strong> Wysoka jakość w konkurencyjnej cenie. Dostajesz więcej, płacąc mniej.</li>
+      <li><strong>Ekspresowa realizacja:</strong> Twoje projekty są dla nas priorytetem. Realizacja w rekordowym tempie bez utraty na jakości.</li>
+    </ul>
+    <p>Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p>
+    <div class="button-container"> 
+      <Button variant="raised">
+        <Label>Poproś o wycenę</Label>
+      </Button>
+      <Button variant="raised">
+        <Label>Nasze projekty</Label>
+      </Button>
+    </div>
   </div>
 </div>
 
-<style>
-  .landing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-
-  .norskit-image img {
-    max-width: 100%;
-    height: auto; 
-  }
-
-  .norskit-text {
-    margin-top: 20px;
-  }
-</style>
+<script lang="ts">
+  import Button, { Label } from '@smui/button';
+</script>
