@@ -43,10 +43,10 @@
     </ul>
     <p>Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p>
     <div class="button-container"> 
-      <Button variant="raised">
+      <Button class="{className}" variant="raised">
         <Label>Poproś o wycenę</Label>
       </Button>
-      <Button variant="raised">
+      <Button class="{className}" variant="raised">
         <Label>Nasze projekty</Label>
       </Button>
     </div>
@@ -55,4 +55,5 @@
 
 <script lang="ts">
   import Button, { Label } from '@smui/button';
+  export let className="";
 </script>
