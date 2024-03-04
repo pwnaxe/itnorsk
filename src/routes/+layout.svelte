@@ -48,7 +48,7 @@ function changeLocale(lang) {
 </script>
 
 <svelte:head>
-	<title>ITNorsk</title>
+	<title>NorskCode</title>
 	<meta name="description" content="Lets ITNorsk This" />
   <link
     rel="stylesheet"

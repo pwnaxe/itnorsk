@@ -1,3 +1,9 @@
+<script lang="ts">
+  import Button, { Label } from '@smui/button';
+  export let className = "";
+  import Card, { Content } from '@smui/card';
+</script>
+
 <style>
   .norskit-top {
     display: flex;
@@ -30,6 +36,12 @@
   gap: 20px;
   padding-top: 20px;
 }
+
+.card-display {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
 </style>
 
 <div class="norskit-top">
@@ -51,9 +63,13 @@
       </Button>
     </div>
   </div>
+  <div class="card-display">
+    <Card>
+      <Content>
+        <h2>Przebudowa w toku!</h2>
+        <p>Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p>
+        <p>Masz pytania? <a href="mailto:kontakt@example.com">Napisz do nas</a>.</p>
+      </Content>
+    </Card>
+  </div>
 </div>
-
-<script lang="ts">
-  import Button, { Label } from '@smui/button';
-  export let className="";
-</script>
