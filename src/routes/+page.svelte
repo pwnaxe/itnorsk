@@ -30,7 +30,7 @@
   </Row>
 </TopAppBar>
 <AutoAdjust {topAppBar}>
-  <Top className="navmenu"/>
+  <Top className="layout"/>
   <Tech />
 </AutoAdjust>
 </div>

@@ -2,6 +2,13 @@
   import Button, { Label } from '@smui/button';
   export let className = "";
   import Card, { Content } from '@smui/card';
+  import { goto } from '$app/navigation';
+  function navigateToProjects() {
+    goto('../projects');
+  }
+  function navigateToContact() {
+    goto('../contact');
+  }
 </script>
 
 <style>
@@ -55,12 +62,12 @@
     </ul>
     <p>Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p>
     <div class="button-container"> 
-      <Button class="{className}" variant="raised">
+      <Button class="{className}" variant="raised" on:click={navigateToContact}>
         <Label>Poproś o wycenę</Label>
       </Button>
-      <Button class="{className}" variant="raised">
+      <Button class="{className}" variant="raised" on:click={navigateToProjects}>
         <Label>Nasze projekty</Label>
-      </Button>
+      </Button>      
     </div>
   </div>
   <div class="card-display">
@@ -68,7 +75,7 @@
       <Content>
         <h2>Przebudowa w toku!</h2>
         <p>Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p>
-        <p>Masz pytania? <a href="mailto:kontakt@example.com">Napisz do nas</a>.</p>
+        <p>Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p>
       </Content>
     </Card>
   </div>

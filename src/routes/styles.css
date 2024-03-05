@@ -12,11 +12,17 @@ body {
 	.navmenu {
 		background-color: rgb(41, 83, 175);
 	}
+	.layout {
+		background-color: rgb(41, 83, 175);
+	}
 }
 
 [data-theme='dark'] {
 	background-color: #222222;
 	.navmenu {
+		background-color: rgb(88, 88, 88);
+	}
+	.layout {
 		background-color: rgb(88, 88, 88);
 	}
 }
@@ -26,11 +32,17 @@ body {
 	.navmenu {
 		background-color: rgb(33, 88, 28);
 	}
+	.layout {
+		background-color: rgb(33, 88, 28);
+	}
 }
 
 [data-theme='blue'] {
 	background-color: #7bbceb;
 	.navmenu {
+		background-color: rgb(41, 83, 175);
+	}
+	.layout {
 		background-color: rgb(41, 83, 175);
 	}
 }
