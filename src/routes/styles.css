@@ -2,9 +2,9 @@ body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	background-attachment: fixed;
-	background: linear-gradient(-45deg, #295270, #295270, #524175, #524175);
+	background: linear-gradient(-45deg, #8aa8bd, #4786af, #0d7cc5, #002d4b);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 	color: white;
 }
 
