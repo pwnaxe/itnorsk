@@ -86,7 +86,6 @@ function changeLocale(lang) {
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
 	}
 	main {
 		flex: 1;
@@ -108,6 +107,7 @@ function changeLocale(lang) {
 		position: absolute;
 		top: 3px;
 		right: 2%;
+		color: black;
 	}
 
 	.corner a {

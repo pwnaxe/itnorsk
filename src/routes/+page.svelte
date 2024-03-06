@@ -8,7 +8,6 @@
   import { writable } from 'svelte/store';
   import IconButton from '@smui/icon-button';
   import Top from './components/top.svelte'
-	import Tech from './components/tech.svelte'
 
   let topAppBar: TopAppBar;
   const isDropdownOpen = writable(false);
@@ -31,7 +30,6 @@
 </TopAppBar>
 <AutoAdjust {topAppBar}>
   <Top className="layout"/>
-  <Tech />
 </AutoAdjust>
 </div>
 

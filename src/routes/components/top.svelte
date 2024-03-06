@@ -9,6 +9,10 @@
   function navigateToContact() {
     goto('../contact');
   }
+  let isVisible = true;
+  function closewin() {
+    isVisible = false;
+  }
 </script>
 
 <style>
@@ -17,9 +21,6 @@
     justify-content: flex-start;
     align-items: center; 
     height: 100vh;
-    background: linear-gradient(-45deg, #295270, #295270, #524175, #524175);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -48,7 +49,11 @@
   display: flex;
   position: absolute;
   right: 0;
+  color: black; 
 }
+.isHidden {
+    display: none;
+  }
 </style>
 
 <div class="norskit-top">
@@ -65,17 +70,20 @@
       <Button class="{className}" variant="raised" on:click={navigateToContact}>
         <Label>Poproś o wycenę</Label>
       </Button>
-      <Button class="{className}" variant="raised" on:click={navigateToProjects}>
+      <Button class="{className}" variant="raised" on:click={closewin}>
         <Label>Nasze projekty</Label>
       </Button>      
     </div>
   </div>
-  <div class="card-display">
+  <div class="card-display" class:isHidden={!isVisible}>
     <Card>
       <Content>
         <h2>Przebudowa w toku!</h2>
         <p>Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p>
         <p>Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p>
+        <Button class="{className}" variant="raised" on:click={closewin}>
+          <Label>Zamknij okno</Label>
+        </Button>
       </Content>
     </Card>
   </div>
