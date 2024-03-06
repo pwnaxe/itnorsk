@@ -13,6 +13,12 @@
       "_ssr.js"
     ]
   },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "imports": [
+      "_exports.js"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js"
   },
@@ -35,7 +41,7 @@
     "file": "entries/fallbacks/error.svelte.js",
     "imports": [
       "_ssr.js",
-      "_exports.js"
+      "_client.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
@@ -52,7 +58,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.AQjQLEYO.css"
+      "_app/immutable/assets/_layout.rjhmajjD.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -70,15 +76,32 @@
   },
   "src/routes/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.B9522R8U.css"
+      "_app/immutable/assets/_page.G262tGMg.css"
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [
       "_ssr.js",
       "_index.js",
-      "_IconButton.js"
+      "_IconButton.js",
+      "_client.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
+  },
+  "src/routes/contact/+page.svelte": {
+    "file": "entries/pages/contact/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/contact/+page.svelte"
+  },
+  "src/routes/projects/+page.svelte": {
+    "file": "entries/pages/projects/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/projects/+page.svelte"
   }
 }

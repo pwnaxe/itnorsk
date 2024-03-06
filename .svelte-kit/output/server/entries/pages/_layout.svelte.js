@@ -585,7 +585,7 @@ derived([$locale], () => formatDate);
 derived([$locale], () => formatNumber);
 derived([$locale, $dictionary], () => getJSON);
 const css = {
-  code: ".app.svelte-1qqd5ck.svelte-1qqd5ck{display:flex;flex-direction:column;min-height:100vh}main.svelte-1qqd5ck.svelte-1qqd5ck{flex:1;display:flex;flex-direction:column;width:100%;margin:0 auto;box-sizing:border-box}.corner.svelte-1qqd5ck.svelte-1qqd5ck{display:flex;justify-content:center;flex-direction:row;align-items:center;z-index:10;width:3em;height:3em;position:absolute;top:3px;right:2%}.corner.svelte-1qqd5ck a.svelte-1qqd5ck{display:block}.corner.svelte-1qqd5ck img.svelte-1qqd5ck{width:2em;height:2em;object-fit:contain}",
+  code: ".app.svelte-1l0riht.svelte-1l0riht{display:flex;flex-direction:column}main.svelte-1l0riht.svelte-1l0riht{flex:1;display:flex;flex-direction:column;width:100%;margin:0 auto;box-sizing:border-box}.corner.svelte-1l0riht.svelte-1l0riht{display:flex;justify-content:center;flex-direction:row;align-items:center;z-index:10;width:3em;height:3em;position:absolute;top:3px;right:2%;color:black}.corner.svelte-1l0riht a.svelte-1l0riht{display:block}.corner.svelte-1l0riht img.svelte-1l0riht{width:2em;height:2em;object-fit:contain}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -594,7 +594,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     initialLocale: "en"
   });
   $$result.css.add(css);
-  return `${$$result.head += `<!-- HEAD_svelte-1xi8h5g_START -->${$$result.title = `<title>NorskCode</title>`, ""}<meta name="description" content="Lets ITNorsk This"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://unpkg.com/@material/typography@14.0.0/dist/mdc.typography.css"><link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css"><!-- HEAD_svelte-1xi8h5g_END -->`, ""} <div class="app svelte-1qqd5ck"><div class="corner svelte-1qqd5ck"><button></button> ${validate_component(IconButton, "IconButton").$$render($$result, { class: "material-icons" }, {}, {
+  return `${$$result.head += `<!-- HEAD_svelte-1xi8h5g_START -->${$$result.title = `<title>NorskCode</title>`, ""}<meta name="description" content="Lets ITNorsk This"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://unpkg.com/@material/typography@14.0.0/dist/mdc.typography.css"><link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css"><!-- HEAD_svelte-1xi8h5g_END -->`, ""} <div class="app svelte-1l0riht"><div class="corner svelte-1l0riht"><button></button> ${validate_component(IconButton, "IconButton").$$render($$result, { class: "material-icons" }, {}, {
     default: () => {
       return `${validate_component(CommonIcon, "Icon").$$render($$result, { tag: "svg", viewBox: "0 0 24 24" }, {}, {
         default: () => {
@@ -602,7 +602,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })} <a href="https://github.com/pwnaxe" class="svelte-1qqd5ck" data-svelte-h="svelte-1k7g6od"><img${add_attribute("src", github, 0)} alt="GitHub" class="svelte-1qqd5ck"></a></div> <main class="svelte-1qqd5ck">${slots.default ? slots.default({}) : ``}</main> </div>`;
+  })} <a href="https://github.com/pwnaxe" class="svelte-1l0riht" data-svelte-h="svelte-1k7g6od"><img${add_attribute("src", github, 0)} alt="GitHub" class="svelte-1l0riht"></a></div> <main class="svelte-1l0riht">${slots.default ? slots.default({}) : ``}</main> </div>`;
 });
 export {
   Layout as default
