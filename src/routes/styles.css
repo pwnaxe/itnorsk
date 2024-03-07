@@ -3,9 +3,62 @@ body {
 	margin: 0;
 	background-attachment: fixed;
 	color: white;
-	background: linear-gradient(-45deg, #128ae0, #308fce, #0d7cc5, #002d4b);
-	animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
+}
+
+[data-theme='default'] {
+	body {
+		background: linear-gradient(-45deg, #003366, #0057b8, #007bff, #000033);
+		animation: gradient 15s ease infinite;
+		background-size: 400% 400%;
+	}
+	.navmenu {
+		background-color: rgba(255, 69, 0, 0.7);
+	}
+	.layout {
+		background-color: rgba(255, 20, 147, 0.7);
+	}
+}
+
+[data-theme='dark'] {
+	body {
+		background: linear-gradient(-45deg, #333333, #555555, #999999, #dddddd);
+		animation: gradient 15s ease infinite;
+		background-size: 400% 400%;
+	}
+	.navmenu {
+		background-color: rgba(105, 105, 105, 0.8);
+	}
+	.layout {
+		background-color: rgba(169, 169, 169, 0.8);
+	}
+}
+
+[data-theme='green'] {
+	body {
+		background: linear-gradient(-45deg, #004d00, #007f00, #00b300, #002200);
+		animation: gradient 15s ease infinite;
+		background-size: 400% 400%;
+	}
+	.navmenu {
+		background-color: rgba(34, 139, 34, 0.7);
+	}
+	.layout {
+		background-color: rgba(50, 205, 50, 0.7);
+	}
+}
+
+[data-theme='orange'] {
+	body {
+		background: linear-gradient(-45deg, #cc5500, #ff6f00, #ff8f00, #8b4000);
+		animation: gradient 15s ease infinite;
+		background-size: 400% 400%;
+	}
+	.navmenu {
+		background-color: rgba(30, 144, 255, 0.7);
+	}
+	.layout {
+		background-color: rgba(0, 191, 255, 0.7);
+	}
 }
 
 @keyframes gradient {
@@ -17,45 +70,5 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
-	}
-}
-
-[data-theme='default'] {
-	background-color: #ffffff;
-	.navmenu {
-		background-color: rgb(41, 83, 175);
-	}
-	.layout {
-		background-color: rgb(41, 83, 175);
-	}
-}
-
-[data-theme='dark'] {
-	background-color: #222222;
-	.navmenu {
-		background-color: rgb(88, 88, 88);
-	}
-	.layout {
-		background-color: rgb(88, 88, 88);
-	}
-}
-
-[data-theme='green'] {
-	background-color: #a9f1af;
-	.navmenu {
-		background-color: rgb(33, 88, 28);
-	}
-	.layout {
-		background-color: rgb(33, 88, 28);
-	}
-}
-
-[data-theme='blue'] {
-	background-color: #7bbceb;
-	.navmenu {
-		background-color: rgb(41, 83, 175);
-	}
-	.layout {
-		background-color: rgb(41, 83, 175);
 	}
 }

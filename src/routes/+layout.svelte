@@ -15,7 +15,7 @@
 	
 
   let theme;
-  const themes = ['default', 'dark', 'green', 'blue'];
+  const themes = ['default', 'dark', 'green', 'orange'];
 
   onMount(() => {
     theme = localStorage.getItem('theme') || 'default';
