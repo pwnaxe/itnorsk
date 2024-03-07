@@ -1,7 +1,5 @@
 {
 	"/": [
 		"src/routes/+page.js"
-	],
-	"/contact": [],
-	"/projects": []
+	]
 }

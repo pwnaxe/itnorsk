@@ -4,15 +4,7 @@
 	import github from '$lib/images/github.svg';
   import { onMount } from 'svelte';
 	import { mdiFormatColorFill } from '@mdi/js';
-  import IconButton, { Icon } from '@smui/icon-button';
-	import { init, addMessages, locale } from 'svelte-i18n';
-
-  let isPaymentPopupOpen = writable(false);
-
-  function openPaymentPopup() {
-    isPaymentPopupOpen.set(true);
-  }
-	
+  import IconButton, { Icon } from '@smui/icon-button';	
 
   let theme;
   const themes = ['default', 'dark', 'green', 'orange'];
@@ -34,17 +26,6 @@
     const root = document.documentElement;
     root.setAttribute('data-theme', theme);
   }
-
-
-init({
-	fallbackLocale: 'en',
-	initialLocale: 'en',
-});
-
-function changeLocale(lang) {
-	locale.set(lang);
-	localStorage.setItem('locale', lang);
-}
 </script>
 
 <svelte:head>
@@ -67,7 +48,6 @@ function changeLocale(lang) {
 
 <div class="app">
 	<div class="corner">
-		<button on:click={() => changeLocale()}></button>
 		<IconButton class="material-icons" on:click={changeTheme}>
 			<Icon tag="svg" viewBox="0 0 24 24">
 				<path fill="currentColor" d={mdiFormatColorFill} />

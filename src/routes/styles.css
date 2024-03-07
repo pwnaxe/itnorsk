@@ -2,62 +2,62 @@ body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	background-attachment: fixed;
-	color: white;
+	color: #ffffff;
 }
 
 [data-theme='default'] {
 	body {
-		background: linear-gradient(-45deg, #003366, #0057b8, #007bff, #000033);
+		background: linear-gradient(-45deg, #3c6997, #0a3055, #2c3e50, #13385a);
 		animation: gradient 15s ease infinite;
 		background-size: 400% 400%;
 	}
 	.navmenu {
-		background-color: rgba(255, 69, 0, 0.7);
+		background-color: #95a5a6;
 	}
 	.layout {
-		background-color: rgba(255, 20, 147, 0.7);
+		background-color: #7f8c8d;
 	}
 }
 
 [data-theme='dark'] {
 	body {
-		background: linear-gradient(-45deg, #333333, #555555, #999999, #dddddd);
+		background: linear-gradient(-45deg, #919191, #3f2f2f, #534c4c, #bbbbbb);
 		animation: gradient 15s ease infinite;
 		background-size: 400% 400%;
 	}
 	.navmenu {
-		background-color: rgba(105, 105, 105, 0.8);
+		background-color: #e74c3c;
 	}
 	.layout {
-		background-color: rgba(169, 169, 169, 0.8);
+		background-color: #c0392b;
 	}
 }
 
 [data-theme='green'] {
 	body {
-		background: linear-gradient(-45deg, #004d00, #007f00, #00b300, #002200);
+		background: linear-gradient(-45deg, #27ae60, #2ecc71, #27ae60, #229954);
 		animation: gradient 15s ease infinite;
 		background-size: 400% 400%;
 	}
 	.navmenu {
-		background-color: rgba(34, 139, 34, 0.7);
+		background-color: #9b59b6;
 	}
 	.layout {
-		background-color: rgba(50, 205, 50, 0.7);
+		background-color: #8e44ad;
 	}
 }
 
 [data-theme='orange'] {
 	body {
-		background: linear-gradient(-45deg, #cc5500, #ff6f00, #ff8f00, #8b4000);
+		background: linear-gradient(-45deg, #e67e22, #d35400, #e67e22, #e74c3c);
 		animation: gradient 15s ease infinite;
 		background-size: 400% 400%;
 	}
 	.navmenu {
-		background-color: rgba(30, 144, 255, 0.7);
+		background-color: #3498db;
 	}
 	.layout {
-		background-color: rgba(0, 191, 255, 0.7);
+		background-color: #2980b9;
 	}
 }
 

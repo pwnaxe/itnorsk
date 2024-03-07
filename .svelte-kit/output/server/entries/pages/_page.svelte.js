@@ -2,7 +2,6 @@ import { c as create_ssr_component, a as compute_rest_props, g as get_current_co
 import { MDCTopAppBarBaseFoundation, MDCShortTopAppBarFoundation, MDCFixedTopAppBarFoundation, MDCTopAppBarFoundation } from "@material/top-app-bar";
 import { r as readable } from "../../chunks/index.js";
 import { f as forwardEventsBuilder, c as classMap, S as SmuiElement, d as dispatch, g as globals, R as Ripple, I as IconButton } from "../../chunks/IconButton.js";
-import "../../chunks/client.js";
 const CommonLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
   const forwardEvents = forwardEventsBuilder(get_current_component());
