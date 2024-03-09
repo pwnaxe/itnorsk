@@ -2,7 +2,6 @@ import { c as create_ssr_component, a as compute_rest_props, g as get_current_co
 import { MDCTopAppBarBaseFoundation, MDCShortTopAppBarFoundation, MDCFixedTopAppBarFoundation, MDCTopAppBarFoundation } from "@material/top-app-bar";
 import { r as readable } from "../../chunks/index.js";
 import { f as forwardEventsBuilder, c as classMap, S as SmuiElement, d as dispatch, g as globals, R as Ripple, I as IconButton } from "../../chunks/IconButton.js";
-import "../../chunks/client.js";
 const CommonLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
   const forwardEvents = forwardEventsBuilder(get_current_component());
@@ -714,47 +713,9 @@ const css = {
   code: ".norskit-top.svelte-1jigad5{display:flex;justify-content:flex-start;align-items:center;height:100vh}.text-container.svelte-1jigad5{max-width:50vw;padding-left:5vw}.button-container.svelte-1jigad5{display:flex;justify-content:flex-start;gap:20px;padding-top:20px}.card-display.svelte-1jigad5{display:flex;position:absolute;right:0;color:black}.isHidden.svelte-1jigad5{display:none}",
   map: null
 };
-const Top = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { className = "" } = $$props;
-  if ($$props.className === void 0 && $$bindings.className && className !== void 0)
-    $$bindings.className(className);
-  $$result.css.add(css);
-  return `<div class="norskit-top svelte-1jigad5"><div class="text-container svelte-1jigad5"><h1 data-svelte-h="svelte-ozutok">Odkryj przyszłość programowania z nami</h1> <p data-svelte-h="svelte-7u114z">Z nami programowanie to nie tylko kod, to realizacja wizji nowoczesnej technologii. Dlaczego warto nas wybrać?</p> <ul data-svelte-h="svelte-dablmb"><li><strong>Innowacyjne rozwiązania AI:</strong> Stawiamy na sztuczną inteligencję, by dostarczać rozwiązania wyprzedzające czas.</li> <li><strong>Efektywność kosztowa:</strong> Wysoka jakość w konkurencyjnej cenie. Dostajesz więcej, płacąc mniej.</li> <li><strong>Ekspresowa realizacja:</strong> Twoje projekty są dla nas priorytetem. Realizacja w rekordowym tempie bez utraty na jakości.</li></ul> <p data-svelte-h="svelte-un295y">Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p> <div class="button-container svelte-1jigad5">${validate_component(Button, "Button").$$render($$result, { class: className, variant: "raised" }, {}, {
-    default: () => {
-      return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-        default: () => {
-          return `Poproś o wycenę`;
-        }
-      })}`;
-    }
-  })} ${validate_component(Button, "Button").$$render($$result, { class: className, variant: "raised" }, {}, {
-    default: () => {
-      return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-        default: () => {
-          return `Nasze projekty`;
-        }
-      })}`;
-    }
-  })}</div></div> <div class="${["card-display svelte-1jigad5", ""].join(" ").trim()}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
-    default: () => {
-      return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
-        default: () => {
-          return `<h2 data-svelte-h="svelte-aowtcc">Przebudowa w toku!</h2> <p data-svelte-h="svelte-1y39ipr">Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p> <p data-svelte-h="svelte-r8ogo0">Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p> ${validate_component(Button, "Button").$$render($$result, { class: className, variant: "raised" }, {}, {
-            default: () => {
-              return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Zamknij okno`;
-                }
-              })}`;
-            }
-          })}`;
-        }
-      })}`;
-    }
-  })}</div></div>`;
-});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let topAppBar;
+  $$result.css.add(css);
   let $$settled;
   let $$rendered;
   let previous_head = $$result.head;
@@ -797,7 +758,39 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     )} ${validate_component(AutoAdjust, "AutoAdjust").$$render($$result, { topAppBar }, {}, {
       default: () => {
-        return `${validate_component(Top, "Top").$$render($$result, { className: "layout" }, {}, {})}`;
+        return `<div class="norskit-top svelte-1jigad5"><div class="text-container svelte-1jigad5"><h1 data-svelte-h="svelte-ozutok">Odkryj przyszłość programowania z nami</h1> <p data-svelte-h="svelte-7u114z">Z nami programowanie to nie tylko kod, to realizacja wizji nowoczesnej technologii. Dlaczego warto nas wybrać?</p> <ul data-svelte-h="svelte-1jvjppv"><li><strong>Innowacyjne rozwiązania AI:</strong> Stawiamy na sztuczną inteligencję, by dostarczać rozwiązania wyprzedzające czas.</li> <li><strong>Efektywność kosztowa:</strong> Wysoka jakość w konkurencyjnej cenie. Dostajesz więcej, płacąc mniej.</li> <li><strong>Ekspresowa realizacja:</strong> Twoje projekty są dla nas priorytetem. Realizacja w rekordowym tempie bez utraty na jakości.</li></ul> <p data-svelte-h="svelte-un295y">Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p> <div class="button-container svelte-1jigad5">${validate_component(Button, "Button").$$render($$result, { class: "layout", variant: "raised" }, {}, {
+          default: () => {
+            return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+              default: () => {
+                return `Poproś o wycenę`;
+              }
+            })}`;
+          }
+        })} ${validate_component(Button, "Button").$$render($$result, { class: "layout", variant: "raised" }, {}, {
+          default: () => {
+            return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+              default: () => {
+                return `Nasze projekty`;
+              }
+            })}`;
+          }
+        })}</div></div> <div class="${["card-display svelte-1jigad5", ""].join(" ").trim()}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+          default: () => {
+            return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              default: () => {
+                return `<h2 data-svelte-h="svelte-aowtcc">Przebudowa w toku!</h2> <p data-svelte-h="svelte-1y39ipr">Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p> <p data-svelte-h="svelte-r8ogo0">Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p> ${validate_component(Button, "Button").$$render($$result, { class: "layout", variant: "raised" }, {}, {
+                  default: () => {
+                    return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+                      default: () => {
+                        return `Zamknij okno`;
+                      }
+                    })}`;
+                  }
+                })}`;
+              }
+            })}`;
+          }
+        })}</div></div> <div data-svelte-h="svelte-1r4fw85"><h1>Co robimy?</h1> <p>W naszej ofercie znajdziesz szeroki wachlarz usług, które pomogą Ci w realizacji Twoich projektów. Sprawdź, co możemy dla Ciebie zrobić!</p></div>`;
       }
     })} </div>`;
   } while (!$$settled);

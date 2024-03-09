@@ -10,28 +10,13 @@ return {
 	assets: new Set(["favicon.png","robots.txt"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.tfDTtzi8.js","app":"_app/immutable/entry/app.ZhweqOxg.js","imports":["_app/immutable/entry/start.tfDTtzi8.js","_app/immutable/chunks/entry.NTi4k8Hg.js","_app/immutable/chunks/scheduler.r29ZSyza.js","_app/immutable/entry/app.ZhweqOxg.js","_app/immutable/chunks/scheduler.r29ZSyza.js","_app/immutable/chunks/index.vAmFYpgg.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.uzp4yS2s.js","app":"_app/immutable/entry/app.i7fSbOZ9.js","imports":["_app/immutable/entry/start.uzp4yS2s.js","_app/immutable/chunks/entry.QnR8RkBp.js","_app/immutable/chunks/scheduler.r29ZSyza.js","_app/immutable/chunks/index.bqecsoYB.js","_app/immutable/entry/app.i7fSbOZ9.js","_app/immutable/chunks/scheduler.r29ZSyza.js","_app/immutable/chunks/index.9vqZ6Hws.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
-			__memo(() => import('./nodes/1.js')),
-			__memo(() => import('./nodes/3.js')),
-			__memo(() => import('./nodes/4.js'))
+			__memo(() => import('./nodes/1.js'))
 		],
 		routes: [
-			{
-				id: "/contact",
-				pattern: /^\/contact\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 2 },
-				endpoint: null
-			},
-			{
-				id: "/projects",
-				pattern: /^\/projects\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 3 },
-				endpoint: null
-			}
+			
 		],
 		matchers: async () => {
 			

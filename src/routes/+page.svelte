@@ -9,7 +9,6 @@
   import IconButton from '@smui/icon-button';
   import Button, { Label } from '@smui/button';
   import Card, { Content } from '@smui/card';
-	import Techlogos from './components/techlogos.svelte';
 
   let topAppBar: TopAppBar;
   const isDropdownOpen = writable(false);
@@ -72,7 +71,6 @@
   <div>
     <h1>Co robimy?</h1>
     <p>W naszej ofercie znajdziesz szeroki wachlarz usług, które pomogą Ci w realizacji Twoich projektów. Sprawdź, co możemy dla Ciebie zrobić!</p>
-    <Techlogos />
   </div>
 </AutoAdjust>
 </div>
