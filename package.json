@@ -40,6 +40,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.5.1",
+		"@fortawesome/free-brands-svg-icons": "^6.5.1",
+		"@fortawesome/svelte-fontawesome": "^0.2.2",
 		"@mdi/js": "^7.4.47",
 		"svelte-i18n": "^4.0.0",
 		"swiper": "^11.0.7"

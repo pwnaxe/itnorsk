@@ -47,10 +47,10 @@
       </ul>
       <p>Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p>
       <div class="button-container"> 
-        <Button class="layout" variant="raised">
+        <Button href="/prices" variant="raised" class="layout layout-priority">
           <Label>Poproś o wycenę</Label>
         </Button>
-        <Button class="layout" variant="raised">
+        <Button href="/projects" variant="raised" class="layout layout-priority">
           <Label>Nasze projekty</Label>
         </Button>      
       </div>
@@ -61,16 +61,12 @@
           <h2>Przebudowa w toku!</h2>
           <p>Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p>
           <p>Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p>
-          <Button class="layout" variant="raised" on:click={closewin}>
+          <Button class="layout layout-priority" variant="raised" on:click={closewin}>
             <Label>Zamknij okno</Label>
           </Button>
         </Content>
       </Card>
     </div>
-  </div>
-  <div>
-    <h1>Co robimy?</h1>
-    <p>W naszej ofercie znajdziesz szeroki wachlarz usług, które pomogą Ci w realizacji Twoich projektów. Sprawdź, co możemy dla Ciebie zrobić!</p>
   </div>
 </AutoAdjust>
 </div>
