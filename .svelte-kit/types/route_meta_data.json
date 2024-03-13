@@ -3,5 +3,6 @@
 		"src/routes/+page.js"
 	],
 	"/prices": [],
-	"/projects": []
+	"/projects": [],
+	"/technology": []
 }

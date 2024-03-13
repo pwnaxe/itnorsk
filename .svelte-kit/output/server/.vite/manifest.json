@@ -52,7 +52,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.x6aIP4Es.css"
+      "_app/immutable/assets/_layout.RiL9kdLn.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -79,5 +79,29 @@
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
+  },
+  "src/routes/prices/+page.svelte": {
+    "file": "entries/pages/prices/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/prices/+page.svelte"
+  },
+  "src/routes/projects/+page.svelte": {
+    "file": "entries/pages/projects/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/projects/+page.svelte"
+  },
+  "src/routes/technology/+page.svelte": {
+    "file": "entries/pages/technology/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/technology/+page.svelte"
   }
 }
