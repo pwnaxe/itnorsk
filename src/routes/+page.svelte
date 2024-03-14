@@ -68,10 +68,19 @@
       </Card>
     </div>
   </div>
+  <Button href="/contact" class="buttoncontact">
+    <Label>Skontaktuj się z nami!</Label>
+  </Button>    
 </AutoAdjust>
 </div>
 
 <style>
+  .buttoncontact {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
   .norskit-top {
     display: flex;
     justify-content: flex-start;
