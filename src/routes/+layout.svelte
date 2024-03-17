@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { writable } from 'svelte/store';
 	import './styles.css';
 	import github from '$lib/images/github.svg';
   import { onMount } from 'svelte';
@@ -35,14 +34,10 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
   />
-
-  <!-- Material Typography -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/@material/typography@14.0.0/dist/mdc.typography.css"
   />
-
-  <!-- SMUI -->
   <link rel="stylesheet" href="https://unpkg.com/svelte-material-ui/bare.css" />
 </svelte:head>
 

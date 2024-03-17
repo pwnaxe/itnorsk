@@ -30,6 +30,17 @@ function compute_rest_props(props, keys) {
       rest[k] = props[k];
   return rest;
 }
+function compute_slots(slots) {
+  const result = {};
+  for (const key in slots) {
+    result[key] = true;
+  }
+  return result;
+}
+function set_store_value(store, ret, value) {
+  store.set(value);
+  return ret;
+}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -236,10 +247,12 @@ export {
   subscribe as h,
   escape as i,
   escape_attribute_value as j,
-  safe_not_equal as k,
+  set_store_value as k,
+  compute_slots as l,
   missing_component as m,
   noop as n,
   onDestroy as o,
+  safe_not_equal as p,
   setContext as s,
   validate_component as v
 };
