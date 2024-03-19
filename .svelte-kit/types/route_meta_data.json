@@ -2,10 +2,7 @@
 	"/": [
 		"src/routes/+page.js"
 	],
-	"/contact": [
-		"src/routes/contact/+server.js"
-	],
-	"/prices": [],
-	"/projects": [],
-	"/technology": []
+	"/components": [
+		"src/routes/components/+server.js"
+	]
 }

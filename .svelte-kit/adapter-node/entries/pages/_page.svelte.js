@@ -1,78 +1,8 @@
-import { c as create_ssr_component, a as compute_rest_props, g as get_current_component, b as getContext, v as validate_component, m as missing_component, d as spread, j as escape_attribute_value, e as escape_object, f as add_attribute, s as setContext, h as subscribe, n as noop } from "../../chunks/ssr.js";
+import { c as create_ssr_component, a as compute_rest_props, g as get_current_component, d as spread, j as escape_attribute_value, e as escape_object, f as add_attribute, b as getContext, s as setContext, o as onDestroy, v as validate_component, m as missing_component, h as subscribe, n as noop } from "../../chunks/ssr.js";
 import { MDCTopAppBarBaseFoundation, MDCShortTopAppBarFoundation, MDCFixedTopAppBarFoundation, MDCTopAppBarFoundation } from "@material/top-app-bar";
-import { r as readable } from "../../chunks/index.js";
-import { f as forwardEventsBuilder, c as classMap, S as SmuiElement } from "../../chunks/SmuiElement.js";
-import { d as dispatch, I as IconButton } from "../../chunks/IconButton.js";
-import { c as classAdderBuilder, B as Button } from "../../chunks/Button.js";
-const CommonLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
-  const forwardEvents = forwardEventsBuilder(get_current_component());
-  let { use = [] } = $$props;
-  let { class: className = "" } = $$props;
-  let element;
-  let { component = SmuiElement } = $$props;
-  let { tag = component === SmuiElement ? "span" : void 0 } = $$props;
-  const context = getContext("SMUI:label:context");
-  const tabindex = getContext("SMUI:label:tabindex");
-  function getElement() {
-    return element.getElement();
-  }
-  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
-    $$bindings.use(use);
-  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
-    $$bindings.class(className);
-  if ($$props.component === void 0 && $$bindings.component && component !== void 0)
-    $$bindings.component(component);
-  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
-    $$bindings.tag(tag);
-  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
-    $$bindings.getElement(getElement);
-  let $$settled;
-  let $$rendered;
-  let previous_head = $$result.head;
-  do {
-    $$settled = true;
-    $$result.head = previous_head;
-    $$rendered = `${validate_component(component || missing_component, "svelte:component").$$render(
-      $$result,
-      Object.assign(
-        {},
-        { tag },
-        { use: [forwardEvents, ...use] },
-        {
-          class: classMap({
-            [className]: true,
-            "mdc-button__label": context === "button",
-            "mdc-fab__label": context === "fab",
-            "mdc-tab__text-label": context === "tab",
-            "mdc-image-list__label": context === "image-list",
-            "mdc-snackbar__label": context === "snackbar",
-            "mdc-banner__text": context === "banner",
-            "mdc-segmented-button__label": context === "segmented-button",
-            "mdc-data-table__pagination-rows-per-page-label": context === "data-table:pagination",
-            "mdc-data-table__header-cell-label": context === "data-table:sortable-header-cell"
-          })
-        },
-        context === "snackbar" ? { "aria-atomic": "false" } : {},
-        { tabindex },
-        $$restProps,
-        { this: element }
-      ),
-      {
-        this: ($$value) => {
-          element = $$value;
-          $$settled = false;
-        }
-      },
-      {
-        default: () => {
-          return `${slots.default ? slots.default({}) : ``}`;
-        }
-      }
-    )}`;
-  } while (!$$settled);
-  return $$rendered;
-});
+import { r as readable } from "../../chunks/index2.js";
+import { f as forwardEventsBuilder, c as classMap, d as dispatch, S as SmuiElement, g as globals, I as IconButton } from "../../chunks/IconButton.js";
+import * as THREE from "three";
 const TopAppBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, [
     "use",
@@ -248,6 +178,110 @@ const TopAppBar = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     {}
   )}${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``} </header>`;
 });
+const { Object: Object_1 } = globals;
+const internals = {
+  component: SmuiElement,
+  tag: "div",
+  class: "",
+  classMap: {},
+  contexts: {},
+  props: {}
+};
+const ClassAdder = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
+  let { use = [] } = $$props;
+  let { class: className = "" } = $$props;
+  let element;
+  const smuiClass = internals.class;
+  const smuiClassMap = {};
+  const smuiClassUnsubscribes = [];
+  const contexts = internals.contexts;
+  const props = internals.props;
+  let { component = internals.component } = $$props;
+  let { tag = component === SmuiElement ? internals.tag : void 0 } = $$props;
+  Object.entries(internals.classMap).forEach(([name, context]) => {
+    const store = getContext(context);
+    if (store && "subscribe" in store) {
+      smuiClassUnsubscribes.push(store.subscribe((value) => {
+        smuiClassMap[name] = value;
+      }));
+    }
+  });
+  const forwardEvents = forwardEventsBuilder(get_current_component());
+  for (let context in contexts) {
+    if (contexts.hasOwnProperty(context)) {
+      setContext(context, contexts[context]);
+    }
+  }
+  onDestroy(() => {
+    for (const unsubscribe of smuiClassUnsubscribes) {
+      unsubscribe();
+    }
+  });
+  function getElement() {
+    return element.getElement();
+  }
+  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
+    $$bindings.use(use);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  if ($$props.component === void 0 && $$bindings.component && component !== void 0)
+    $$bindings.component(component);
+  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
+    $$bindings.tag(tag);
+  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
+    $$bindings.getElement(getElement);
+  let $$settled;
+  let $$rendered;
+  let previous_head = $$result.head;
+  do {
+    $$settled = true;
+    $$result.head = previous_head;
+    $$rendered = `${validate_component(component || missing_component, "svelte:component").$$render(
+      $$result,
+      Object_1.assign(
+        {},
+        { tag },
+        { use: [forwardEvents, ...use] },
+        {
+          class: classMap({
+            [className]: true,
+            [smuiClass]: true,
+            ...smuiClassMap
+          })
+        },
+        props,
+        $$restProps,
+        { this: element }
+      ),
+      {
+        this: ($$value) => {
+          element = $$value;
+          $$settled = false;
+        }
+      },
+      {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      }
+    )}`;
+  } while (!$$settled);
+  return $$rendered;
+});
+const defaults = Object.assign({}, internals);
+function classAdderBuilder(props) {
+  return new Proxy(ClassAdder, {
+    construct: function(target, args) {
+      Object.assign(internals, defaults, props);
+      return new target(...args);
+    },
+    get: function(target, prop) {
+      Object.assign(internals, defaults, props);
+      return target[prop];
+    }
+  });
+}
 const Row = classAdderBuilder({
   class: "mdc-top-app-bar__row",
   tag: "div"
@@ -427,8 +461,18 @@ classAdderBuilder({
   class: "mdc-card__action-icons",
   tag: "div"
 });
+const css$1 = {
+  code: "#container.svelte-p3id3k{width:50vw;height:25vw}",
+  map: null
+};
+const Stormtrooper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let container;
+  new THREE.Clock();
+  $$result.css.add(css$1);
+  return `<div id="container" class="svelte-p3id3k"${add_attribute("this", container, 0)}></div>`;
+});
 const css = {
-  code: ".norskit-top.svelte-7p3yf9{display:flex;justify-content:flex-start;align-items:center;height:100vh}.text-container.svelte-7p3yf9{max-width:50vw;padding-left:5vw}.button-container.svelte-7p3yf9{display:flex;justify-content:flex-start;gap:20px;padding-top:20px}.card-display.svelte-7p3yf9{display:flex;position:absolute;right:0;color:black}.isHidden.svelte-7p3yf9{display:none}",
+  code: ".text-container.svelte-1xo4yg7.svelte-1xo4yg7{padding-left:15vw;padding-top:15vh}.text-container.svelte-1xo4yg7 h1.svelte-1xo4yg7{font-size:3.5em;margin:0}.cards-container.svelte-1xo4yg7.svelte-1xo4yg7{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-around;align-items:center;align-content:space-around;padding-top:25vh}.stormtrooper.svelte-1xo4yg7.svelte-1xo4yg7{position:absolute;top:5%;right:0;width:50%;height:100%}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -476,73 +520,39 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     )} ${validate_component(AutoAdjust, "AutoAdjust").$$render($$result, { topAppBar }, {}, {
       default: () => {
-        return `<div class="norskit-top svelte-7p3yf9"><div class="text-container svelte-7p3yf9"><h1 data-svelte-h="svelte-ozutok">Odkryj przyszłość programowania z nami</h1> <p data-svelte-h="svelte-7u114z">Z nami programowanie to nie tylko kod, to realizacja wizji nowoczesnej technologii. Dlaczego warto nas wybrać?</p> <ul data-svelte-h="svelte-1jvjppv"><li><strong>Innowacyjne rozwiązania AI:</strong> Stawiamy na sztuczną inteligencję, by dostarczać rozwiązania wyprzedzające czas.</li> <li><strong>Efektywność kosztowa:</strong> Wysoka jakość w konkurencyjnej cenie. Dostajesz więcej, płacąc mniej.</li> <li><strong>Ekspresowa realizacja:</strong> Twoje projekty są dla nas priorytetem. Realizacja w rekordowym tempie bez utraty na jakości.</li></ul> <p data-svelte-h="svelte-un295y">Nie pozwól, by ograniczenia tradycyjnego programowania hamowały Twój rozwój. <strong>Z nami osiągniesz więcej</strong>.</p> <div class="button-container svelte-7p3yf9">${validate_component(Button, "Button").$$render(
-          $$result,
-          {
-            href: "/prices",
-            variant: "raised",
-            class: "layout layout-priority"
-          },
-          {},
-          {
-            default: () => {
-              return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Poproś o wycenę`;
-                }
-              })}`;
-            }
-          }
-        )} ${validate_component(Button, "Button").$$render(
-          $$result,
-          {
-            href: "/projects",
-            variant: "raised",
-            class: "layout layout-priority"
-          },
-          {},
-          {
-            default: () => {
-              return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Nasze projekty`;
-                }
-              })}`;
-            }
-          }
-        )}</div></div> <div class="${["card-display svelte-7p3yf9", ""].join(" ").trim()}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+        return `<div class="text-container svelte-1xo4yg7" data-svelte-h="svelte-1voihxb"><h1 class="svelte-1xo4yg7">NORSK <br> HUB</h1></div> <div class="stormtrooper svelte-1xo4yg7">${validate_component(Stormtrooper, "Stormtrooper").$$render($$result, {}, {}, {})}</div> <div class="cards-container svelte-1xo4yg7">${validate_component(Card, "Card").$$render($$result, {}, {}, {
           default: () => {
             return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
               default: () => {
-                return `<h2 data-svelte-h="svelte-aowtcc">Przebudowa w toku!</h2> <p data-svelte-h="svelte-1y39ipr">Jesteśmy w trakcie aktualizacji naszej strony do Svelte,<br> aby zapewnić jeszcze szybsze i bardziej efektywne doświadczenie.<br> Odwiedź nas wkrótce, aby zobaczyć nowości!</p> <p data-svelte-h="svelte-r8ogo0">Masz pytania? <a href="mailto:biuro.norsk@gmail.com">Napisz do nas</a>.</p> ${validate_component(Button, "Button").$$render(
-                  $$result,
-                  {
-                    class: "layout layout-priority",
-                    variant: "raised"
-                  },
-                  {},
-                  {
-                    default: () => {
-                      return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
-                        default: () => {
-                          return `Zamknij okno`;
-                        }
-                      })}`;
-                    }
-                  }
-                )}`;
+                return `<h2 data-svelte-h="svelte-mj591e">Outsource Developers</h2> <p data-svelte-h="svelte-1agseqa">Explore cutting-edge technology with our team of expert developers available for hire. <br><br> From advanced software solutions to innovative IT projects, we provide the skilled workforce you need to bring your vision to life.</p>`;
               }
             })}`;
           }
-        })}</div></div> ${validate_component(Button, "Button").$$render($$result, { href: "", class: "buttoncontact" }, {}, {
+        })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
           default: () => {
-            return `${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+            return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
               default: () => {
-                return `Skontaktuj się z nami!`;
+                return `<h2 data-svelte-h="svelte-jstyhc">Web, Mobile, Desktop App Development</h2> <p data-svelte-h="svelte-o0g7nm">Develop seamless, scalable, and robust applications across all platforms. Our expertise spans from creating engaging websites to building sophisticated mobile and desktop apps, integrating modern UI/UX designs with state-of-the-art functionalities to ensure an exceptional user experience.</p>`;
               }
             })}`;
           }
-        })}`;
+        })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
+          default: () => {
+            return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              default: () => {
+                return `<h2 data-svelte-h="svelte-1nq0lly">Our Technologies</h2> <p data-svelte-h="svelte-s96hvd">List and describe the key technologies and tools your team utilizes in development projects, such as React, Angular, Vue for front-end, Node.js, Python for back-end, Flutter, React Native for mobile apps, Docker for containerization, Kubernetes for orchestration, AWS, Azure for cloud services, and more.</p>`;
+              }
+            })}`;
+          }
+        })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
+          default: () => {
+            return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              default: () => {
+                return `<h2 data-svelte-h="svelte-15qdz1r">IT Infrastructure Maintenance</h2> <p data-svelte-h="svelte-1rh7zgi">Ensure the reliability and efficiency of your IT infrastructure with our comprehensive maintenance services. <br><br>From routine checks to emergency repairs, our team provides the support you need to keep your operations running smoothly.</p>`;
+              }
+            })}`;
+          }
+        })}</div>`;
       }
     })} </div>`;
   } while (!$$settled);

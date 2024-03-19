@@ -7,22 +7,8 @@
       "_internal.js"
     ]
   },
-  "_Button.js": {
-    "file": "chunks/Button.js",
-    "imports": [
-      "_ssr.js",
-      "_SmuiElement.js"
-    ]
-  },
   "_IconButton.js": {
     "file": "chunks/IconButton.js",
-    "imports": [
-      "_ssr.js",
-      "_SmuiElement.js"
-    ]
-  },
-  "_SmuiElement.js": {
-    "file": "chunks/SmuiElement.js",
     "imports": [
       "_ssr.js"
     ]
@@ -31,7 +17,10 @@
     "file": "chunks/exports.js"
   },
   "_index.js": {
-    "file": "chunks/index.js",
+    "file": "chunks/index.js"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
     "imports": [
       "_ssr.js"
     ]
@@ -60,8 +49,9 @@
     "isEntry": true,
     "imports": [
       "_internal.js",
+      "_index.js",
       "_exports.js",
-      "_index.js"
+      "_index2.js"
     ]
   },
   "src/routes/+layout.svelte": {
@@ -70,11 +60,10 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_IconButton.js",
-      "_SmuiElement.js"
+      "_IconButton.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BGIv2R0u.css"
+      "_app/immutable/assets/_layout.DtMiIgdj.css"
     ]
   },
   "src/routes/+page.js": {
@@ -88,43 +77,19 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_index.js",
-      "_SmuiElement.js",
-      "_IconButton.js",
-      "_Button.js"
+      "_index2.js",
+      "_IconButton.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.mOkcxzSK.css"
+      "_app/immutable/assets/_page.D9vFxdJn.css"
     ]
   },
-  "src/routes/prices/+page.svelte": {
-    "file": "entries/pages/prices/_page.svelte.js",
-    "src": "src/routes/prices/+page.svelte",
+  "src/routes/components/+server.js": {
+    "file": "entries/endpoints/components/_server.js",
+    "src": "src/routes/components/+server.js",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
-      "_SmuiElement.js",
-      "_index.js",
-      "_Button.js"
-    ]
-  },
-  "src/routes/projects/+page.svelte": {
-    "file": "entries/pages/projects/_page.svelte.js",
-    "src": "src/routes/projects/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ]
-  },
-  "src/routes/technology/+page.svelte": {
-    "file": "entries/pages/technology/_page.svelte.js",
-    "src": "src/routes/technology/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.bgTWOvSh.css"
+      "_index.js"
     ]
   }
 }

@@ -7,6 +7,7 @@
   } from '@smui/top-app-bar';
   import IconButton from '@smui/icon-button';
   import Card, { Content } from '@smui/card';
+  import Stormtrooper from './components/stormtrooper.svelte';
 
   let topAppBar: TopAppBar;
 </script>
@@ -24,6 +25,9 @@
   <div class="text-container">
     <h1>NORSK <br> HUB</h1>
   </div>
+  <div class="stormtrooper">
+  <Stormtrooper />
+  </div>
   <div class="cards-container">
       <Card>
         <Content>
@@ -33,14 +37,14 @@
       </Card>
       <Card>
         <Content>
-          <h2>Web Development</h2>
-          <p>Build your online presence with custom-designed websites, e-commerce platforms with integrated databases, and AI-enhanced features such as facial recognition from video input.<br><br> Elevate your digital experience to the next level.</p>
+          <h2>Web, Mobile, Desktop App Development</h2>
+          <p>Develop seamless, scalable, and robust applications across all platforms. Our expertise spans from creating engaging websites to building sophisticated mobile and desktop apps, integrating modern UI/UX designs with state-of-the-art functionalities to ensure an exceptional user experience.</p>
         </Content>
       </Card>
       <Card>
         <Content>
-          <h2>Mobile and Desktop Applications</h2>
-          <p>Develop applications using the finest technologies and AI integration.<br><br> Utilize AI to create user behavior filters, enhancing both functionality and user engagement in your software solutions.</p>
+          <h2>Our Technologies</h2>
+          <p>List and describe the key technologies and tools your team utilizes in development projects, such as React, Angular, Vue for front-end, Node.js, Python for back-end, Flutter, React Native for mobile apps, Docker for containerization, Kubernetes for orchestration, AWS, Azure for cloud services, and more.</p>
         </Content>
       </Card>
       <Card>
@@ -56,7 +60,7 @@
 <style>  
   .text-container {
     padding-left: 15vw;
-    padding-top: 25vh;
+    padding-top: 15vh;
   }
   
   .text-container h1 {
@@ -71,7 +75,14 @@
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
-    padding-top: 10vh;
+    padding-top: 25vh;
   }
 
+  .stormtrooper {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
 </style>
