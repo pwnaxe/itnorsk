@@ -15,47 +15,40 @@
     Subtitle,
     Content as DrawerContent,
   } from '@smui/drawer';
+  import Menu from '@smui/menu';
   import List, { Item, Text } from '@smui/list';
+  import Button, { Label } from '@smui/button';
+  
 
   let topAppBar: TopAppBar;
-  let open = false;
-  let active = 'menumobile';
-
-
-  function toggleDrawer() {
-    open = !open;
-  }
-
-  function setActive(value: string) {
-    active = value;
-  }
+  let menu: Menu;
 </script>
 
 <div>
   <TopAppBar class="navmenu" bind:this={topAppBar} variant="short">
     <Row>
       <Section>
-        <IconButton class="material-icons" on:click={toggleDrawer}>menu</IconButton>
+        <IconButton class="material-icons" on:click={() => menu.setOpen(true)}>menu</IconButton>
+        <Menu bind:this={menu}>
+          <List>
+            <Item>
+              <a href="/outsource"><Text>Outsource</Text></a>
+            </Item>
+            <Item>
+              <a href="/development"><Text>Development</Text></a>
+            </Item>
+            <Item>
+              <a href="/technologies"><Text>Our Technologies</Text></a>
+            </Item>
+            <Item>
+              <a href="/support"><Text>Support</Text></a>
+            </Item>
+          </List>
+        </Menu>
         <AppBarTitle>NorskCode</AppBarTitle>
       </Section>
     </Row>
   </TopAppBar>
-  <Drawer class="drawer" bind:open={open}>
-    <Header>
-      <DrawerTitle>Nazwa Drawer</DrawerTitle>
-      <Subtitle>Podtytuł Drawer</Subtitle>
-    </Header>
-    <DrawerContent>
-      <List>
-        <Item on:click={() => setActive('item1')}>
-          <Text>Element 1</Text>
-        </Item>
-        <Item on:click={() => setActive('item2')}>
-          <Text>Element 2</Text>
-        </Item>
-      </List>
-    </DrawerContent>
-  </Drawer>
   <AppContent>
     <AutoAdjust {topAppBar}>
       <div class="text-container">
@@ -89,6 +82,12 @@
             <p>Ensure the reliability and efficiency of your IT infrastructure with our comprehensive maintenance services. <br><br>From routine checks to emergency repairs, our team provides the support you need to keep your operations running smoothly.</p>
           </CardContent>
         </Card>
+        <Card>
+          <CardContent>
+            <h2>Payment Wall</h2>
+            <p>Fast and Secure payment wall to our clients. Pay for Our invoices with your favorite payment method. No added fees.</p>
+          </CardContent>
+        </Card>
       </div>
     </AutoAdjust>
   </AppContent>
@@ -113,6 +112,13 @@
     align-items: center;
     align-content: space-around;
     padding-top: 25vh;
+  }
+
+  .cards-container > * {
+    flex: 1; /* Pozwala kartom na rozciąganie */
+    margin: 10px; /* Dodaje margines dookoła kart */
+    min-width: 250px; /* Minimalna szerokość karty, poniżej której karty zaczną się wrapować */
+    max-width: 30%; /* Maksymalna szerokość karty */
   }
 
   .stormtrooper {
