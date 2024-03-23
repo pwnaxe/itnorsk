@@ -4,5 +4,6 @@
 	],
 	"/components": [
 		"src/routes/components/+server.js"
-	]
+	],
+	"/contact": []
 }

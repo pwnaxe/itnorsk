@@ -52,7 +52,6 @@
 		"animate.css": "^4.1.1",
 		"svelte-i18n": "^4.0.0",
 		"swiper": "^11.0.7",
-		"three": "^0.162.0",
 		"three-collada-loader": "^0.0.1"
 	}
 }
