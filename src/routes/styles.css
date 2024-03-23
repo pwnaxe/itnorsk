@@ -6,15 +6,8 @@ body {
 	overflow-x: hidden;
 }
 
-.mdc-card {
-	width: 20vw;
-	height: 27vh;
-}
-
-.smui-card__content {
-	text-align: center;
-	max-width: 100%;
-	max-height: 100%;
+.mdc-layout-grid {
+	padding-top: 20vh;
 }
 
 [data-theme='default'] {
@@ -26,7 +19,7 @@ body {
 	.navmenu {
 		background-color: #464747;
 	}
-	.mdc-card {
+	.cellcard {
 		background-color: #464747;
 	}
 }
@@ -40,7 +33,7 @@ body {
 	.navmenu {
 		background-color: #e74c3c;
 	}
-	.mdc-card {
+	.cellcard {
 		background-color: #c0392b;
 	}
 }
@@ -54,7 +47,7 @@ body {
 	.navmenu {
 		background-color: #9b59b6;
 	}
-	.mdc-card {
+	.cellcard {
 		background-color: #8e44ad;
 	}
 }
@@ -68,7 +61,7 @@ body {
 	.navmenu {
 		background-color: #003f69;
 	}
-	.mdc-card {
+	.cellcard {
 		background-color: #003f69;
 	}
 }
