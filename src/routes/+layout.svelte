@@ -4,6 +4,8 @@
   import { onMount } from 'svelte';
 	import { mdiFormatColorFill } from '@mdi/js';
   import IconButton, { Icon } from '@smui/icon-button';	
+	import Footer from './components/footer.svelte';
+  import Botbar from './components/botbar.svelte';
 
   let theme;
   const themes = ['default', 'dark', 'green', 'orange'];
@@ -54,6 +56,8 @@
 	</div>
 	<main>
 		<slot />
+		<Footer />
+    <Botbar />
 	</main>
 </div>
 

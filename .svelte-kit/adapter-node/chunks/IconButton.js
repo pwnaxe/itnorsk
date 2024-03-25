@@ -624,6 +624,7 @@ const IconButton = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 export {
   IconButton as I,
+  Ripple as R,
   SmuiElement as S,
   classMap as c,
   dispatch as d,

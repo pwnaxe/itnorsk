@@ -89,6 +89,26 @@ const Svg = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.getElement(getElement);
   return `<svg${spread([escape_object($$restProps)], {})}${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``}</svg>`;
 });
+const css$2 = {
+  code: "footer.footer.svelte-1bcpm27.svelte-1bcpm27{height:fit-content;width:100vw;background-color:#333;color:white;display:flex;justify-content:center;align-items:center;padding:2vw;box-sizing:border-box;font-family:'Arial', sans-serif}.footer-content.svelte-1bcpm27.svelte-1bcpm27{display:flex;justify-content:space-between;flex-wrap:wrap;width:100%;max-width:1200px;margin:auto}.footer-section.svelte-1bcpm27.svelte-1bcpm27{display:flex;flex-direction:column;padding:1vw;flex-grow:1;min-width:250px}.footer-section.svelte-1bcpm27 h3.svelte-1bcpm27{margin-bottom:1vw}.footer-section.svelte-1bcpm27 a.svelte-1bcpm27{color:white;text-decoration:none;margin-bottom:0.5vw}.footer-section.svelte-1bcpm27 a.svelte-1bcpm27:hover{text-decoration:underline}@media(max-width: 768px){.footer-content.svelte-1bcpm27.svelte-1bcpm27{justify-content:center}.footer-section.svelte-1bcpm27.svelte-1bcpm27{align-items:center;padding:1vw 0}}",
+  map: null
+};
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$2);
+  return `<footer class="footer svelte-1bcpm27" data-svelte-h="svelte-unjcyg"><div class="footer-content svelte-1bcpm27"><div class="footer-section svelte-1bcpm27"><h3 class="svelte-1bcpm27">NORSK SP. Z O.O.</h3> <p>ul. Żeglugi Wiślanej 1/12<br>
+      03-043 Warszawa<br>
+      KRS: 0000850697<br>
+      NIP: 5213904886<br>
+      REGON: 386819703</p></div> <div class="footer-section svelte-1bcpm27"><h3 class="svelte-1bcpm27">Mapa strony</h3> <a href="/" class="svelte-1bcpm27">Strona główna</a><br> <a href="/contact" class="svelte-1bcpm27">O nas</a><br> <a href="/contact" class="svelte-1bcpm27">Blog</a><br> <a href="/contact" class="svelte-1bcpm27">Kontakt</a></div> <div class="footer-section svelte-1bcpm27"><h3 class="svelte-1bcpm27">Nasza oferta</h3> <a href="/contact" class="svelte-1bcpm27">Strony internetowe</a><br> <a href="/contact" class="svelte-1bcpm27">Aplikacje internetowe</a><br> <a href="/contact" class="svelte-1bcpm27">Identyfikacje wizualne</a><br> <a href="/contact" class="svelte-1bcpm27">Projektowanie UI/UX</a></div> <div class="footer-section svelte-1bcpm27"><h3 class="svelte-1bcpm27">Kontakt</h3> <a href="mailto:biznes@norskcode.pl" class="svelte-1bcpm27">biznes@norskcode.pl</a><br> <a href="mailto:kontakt@norskcode.pl" class="svelte-1bcpm27">kontakt@norskcode.pl</a><br> <a href="https://discord.gg/linkDoTwojegoKanalu" class="svelte-1bcpm27">Discord</a><br> <a href="tel:+48123456789" class="svelte-1bcpm27">+48 786-874-435</a></div></div> </footer>`;
+});
+const css$1 = {
+  code: ".footer.svelte-1t2c4y9.svelte-1t2c4y9{position:fixed;left:0;bottom:0;width:100%;background-color:#333;color:white;text-align:center}.footer.svelte-1t2c4y9 span.svelte-1t2c4y9{margin-left:5rem}",
+  map: null
+};
+const Botbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$1);
+  return `<div class="footer svelte-1t2c4y9" data-svelte-h="svelte-rmvtt8"><span class="svelte-1t2c4y9">Team NorskCode © 2021</span> <span class="svelte-1t2c4y9">WE APPRECIATE YOUR TIME!</span> </div>`;
+});
 const css = {
   code: ".app.svelte-1l0riht.svelte-1l0riht{display:flex;flex-direction:column}main.svelte-1l0riht.svelte-1l0riht{flex:1;display:flex;flex-direction:column;width:100%;margin:0 auto;box-sizing:border-box}.corner.svelte-1l0riht.svelte-1l0riht{display:flex;justify-content:center;flex-direction:row;align-items:center;z-index:10;width:3em;height:3em;position:absolute;top:3px;right:2%;color:black}.corner.svelte-1l0riht a.svelte-1l0riht{display:block}.corner.svelte-1l0riht img.svelte-1l0riht{width:2em;height:2em;object-fit:contain}",
   map: null
@@ -103,7 +123,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })} <a href="https://github.com/pwnaxe" class="svelte-1l0riht" data-svelte-h="svelte-1k7g6od"><img${add_attribute("src", github, 0)} alt="GitHub" class="svelte-1l0riht"></a></div> <main class="svelte-1l0riht">${slots.default ? slots.default({}) : ``}</main> </div>`;
+  })} <a href="https://github.com/pwnaxe" class="svelte-1l0riht" data-svelte-h="svelte-1k7g6od"><img${add_attribute("src", github, 0)} alt="GitHub" class="svelte-1l0riht"></a></div> <main class="svelte-1l0riht">${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})} ${validate_component(Botbar, "Botbar").$$render($$result, {}, {}, {})}</main> </div>`;
 });
 export {
   Layout as default

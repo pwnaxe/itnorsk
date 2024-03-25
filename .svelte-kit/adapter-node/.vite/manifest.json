@@ -63,7 +63,7 @@
       "_IconButton.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.DtMiIgdj.css"
+      "_app/immutable/assets/_layout.9EOXRZqh.css"
     ]
   },
   "src/routes/+page.js": {
@@ -81,7 +81,7 @@
       "_IconButton.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D9vFxdJn.css"
+      "_app/immutable/assets/_page.C4van15i.css"
     ]
   },
   "src/routes/components/+server.js": {
@@ -90,6 +90,17 @@
     "isEntry": true,
     "imports": [
       "_index.js"
+    ]
+  },
+  "src/routes/contact/+page.svelte": {
+    "file": "entries/pages/contact/_page.svelte.js",
+    "src": "src/routes/contact/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BWYe3gHr.css"
     ]
   }
 }

@@ -23,16 +23,16 @@
         <Menu bind:this={menu}>
           <List>
             <Item>
-              <a href="/outsource"><Text>Outsource</Text></a>
+              <a href="/contact"><Text>Outsource</Text></a>
             </Item>
             <Item>
-              <a href="/development"><Text>Development</Text></a>
+              <a href="/contact"><Text>Development</Text></a>
             </Item>
             <Item>
-              <a href="/technologies"><Text>Our Technologies</Text></a>
+              <a href="/contact"><Text>Our Technologies</Text></a>
             </Item>
             <Item>
-              <a href="/support"><Text>Support</Text></a>
+              <a href="/contact"><Text>Support</Text></a>
             </Item>
           </List>
         </Menu>
@@ -99,19 +99,22 @@
 
 <style>  
  .text-container {
-  padding-left: 15vw;
-  padding-top: 15vh;
+  width: 80vw;
+  text-align: center;
+  padding-top: 10vh;
+  display: block;
+  margin: auto;
 }
 
 .text-container h1 {
-  font-size: 3.5em;
+  font-size: 4rem;
   margin: 0;
 }
 
 
 .cellcard {
-  padding: 20px;
-  margin: 10px;
+  padding: 1vh;
+  margin: 1rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.6);
   border-radius: 14px;
@@ -128,7 +131,7 @@
 }
 
 .cellcard:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.9);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.9);
 }
 
 @media (max-width: 600px) {
